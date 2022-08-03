@@ -4,7 +4,7 @@ stages:
     cmd: python src/prepare.py
     deps:
     - path: data/raw/
-      md5: cd3ab6ad7a8bb6ec623d5741b741f4eb.dir
+      md5: 23b86cd8ad2e8b589e6d306321303be8.dir
       size: 105143224
       nfiles: 13215
     - path: src/prepare.py
@@ -24,22 +24,22 @@ stages:
       md5: 1553c682ccb36190ec0192f9d15ed806
       size: 183793
     - path: src/train.py
-      md5: 8afd0b487365179d1b8bcca7e57a64cd
-      size: 1324
+      md5: 3363e5db83cc3fa372f5438633b99f65
+      size: 1371
     outs:
     - path: model/model.joblib
-      md5: d8afea9a6a6b231116b9e50c749f0711
-      size: 241075
+      md5: 077e4764ee4d77e50efdfd1f7f05b181
+      size: 1696128
   evaluate:
     cmd: python src/evaluate.py
     deps:
     - path: model/model.joblib
-      md5: d8afea9a6a6b231116b9e50c749f0711
-      size: 241075
+      md5: 077e4764ee4d77e50efdfd1f7f05b181
+      size: 1696128
     - path: src/evaluate.py
       md5: b197277667d6269271fff4ae4af8a941
       size: 645
     outs:
     - path: metrics/accuracy.json
-      md5: 91e5d4c1df94326642d96c3f0e72e658
+      md5: 9ff031ea67e6b06f62eb7ef21f960db5
       size: 32
